@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<argos-configuration>
+  <!-- ************************* -->
+  <!-- * General configuration * -->
+  <!-- ************************* -->
+  <framework>
+    <system threads="${ARGOS_NUM_THREADS}"/>
+    <experiment length="0" ticks_per_second="10" rtf_frequency = "10" random_seed="124"/>
+  </framework>
+
+  <!-- *************** -->
+  <!-- * Controllers * -->
+  <!-- *************** -->
+  <controllers>
+    <argos_ros_bot_controller id="argos_ros_bot" library="libargos_ros_bot.so">
+      <actuators>
+        <differential_steering implementation="default"/>
+      </actuators>
+      <sensors>
+        <robot_lidar implementation="default" show_rays="true" num_readings="360"/>
+        <robot_ground_truth implementation="default" />
+      </sensors>
+      <params stopWithoutSubscriberCount="10" callbackTimeoutInSeconds="${SIMULATOR_CALLBACK_TIMEOUT}"/>
+    </argos_ros_bot_controller>
+  </controllers>
+
+  <!-- ****************** -->
+  <!-- * Loop functions * -->
+  <!-- ****************** -->
+  <loop_functions label="argos_ros_clock" library="libargos_ros_clock.so" />
+
+  <!-- *********************** -->
+  <!-- * Arena configuration * -->
+  <!-- *********************** -->
+  <arena size="63.9000, 56.3000, 1" center="31.9500,28.1500,0.5">
+    <box id="wall0" size="49.4000,0.2500,1" movable="false">
+      <body position="31.7500,51.4750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall1" size="19.4000,0.2500,1" movable="false">
+      <body position="23.6500,47.2750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall2" size="5.4500,0.2500,1" movable="false">
+      <body position="43.3750,46.6750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall3" size="0.2500,8.5500,1" movable="false">
+      <body position="14.0750,42.8750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall4" size="0.2500,8.5500,1" movable="false">
+      <body position="33.2250,42.8750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall5" size="19.4000,0.2500,1" movable="false">
+      <body position="23.6500,38.4750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall6" size="0.2500,15.3000,1" movable="false">
+      <body position="40.7750,38.9000,0" orientation="0,0,0" />
+    </box>
+    <box id="wall7" size="0.2500,15.3000,1" movable="false">
+      <body position="45.9750,38.9000,0" orientation="0,0,0" />
+    </box>
+    <box id="wall8" size="3.1500,0.2500,1" movable="false">
+      <body position="12.3750,31.2250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall9" size="5.4500,0.2500,1" movable="false">
+      <body position="43.3750,31.1250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall10" size="35.2000,0.2500,1" movable="false">
+      <body position="35.1000,22.6250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall11" size="0.2500,3.9500,1" movable="false">
+      <body position="17.6250,20.5250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall12" size="0.2500,3.9500,1" movable="false">
+      <body position="52.5750,20.5250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall13" size="35.2000,0.2500,1" movable="false">
+      <body position="35.1000,18.4250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall14" size="7.3000,0.2500,1" movable="false">
+      <body position="49.5500,10.7250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall15" size="0.2500,22.6500,1" movable="false">
+      <body position="10.9250,19.7750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall16" size="0.2500,22.6500,1" movable="false">
+      <body position="13.8250,19.7750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall17" size="3.1500,0.2500,1" movable="false">
+      <body position="12.3750,8.3250,0" orientation="0,0,0" />
+    </box>
+    <box id="wall18" size="0.2500,2.4000,1" movable="false">
+      <body position="46.0250,9.4000,0" orientation="0,0,0" />
+    </box>
+    <box id="wall19" size="0.2500,2.4000,1" movable="false">
+      <body position="53.0750,9.4000,0" orientation="0,0,0" />
+    </box>
+    <box id="wall20" size="7.3000,0.2500,1" movable="false">
+      <body position="49.5500,8.0750,0" orientation="0,0,0" />
+    </box>
+    <box id="wall21" size="0.2500,46.0000,1" movable="false">
+      <body position="7.1750,28.3500,0" orientation="0,0,0" />
+    </box>
+    <box id="wall22" size="0.2500,46.0000,1" movable="false">
+      <body position="56.3250,28.3500,0" orientation="0,0,0" />
+    </box>
+    <box id="wall23" size="49.4000,0.2500,1" movable="false">
+      <body position="31.7500,5.2250,0" orientation="0,0,0" />
+    </box>
+    
+    <distribute>
+      <position method="uniform" min="0, 0, 0" max="63.9000, 56.3000, 0"/>
+      <orientation method="constant" values="0,0,0"/>
+
+      <entity quantity="${ARGOS_NUM_ROBOTS}" max_trials="100">
+
+        <turtlebot id="${ARGOS_ROBOT_PREFIX}">
+          <controller config="argos_ros_bot"/>
+        </turtlebot>
+
+      </entity>
+    </distribute>
+
+  </arena>
+
+  <!-- ******************* -->
+  <!-- * Physics engines * -->
+  <!-- ******************* -->
+  <physics_engines>
+    <dynamics2d id="dyn2d"/>
+  </physics_engines>
+
+  <!-- ********* -->
+  <!-- * Media * -->
+  <!-- ********* -->
+  <media>
+    <led id="leds"/>
+  </media>
+
+  <!-- ****************** -->
+  <!-- * Visualization * -->
+  <!-- ****************** -->
+  <!--visualization>
+    <qt-opengl lua_editor="false">
+      <camera>
+        <placement idx="0" position="0,0,79.875" look_at="0,0,0" lens_focal_length="2" />
+      </camera>
+  </visualization-->
+</argos-configuration>

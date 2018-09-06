@@ -1,0 +1,25 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<launch>
+    <include file="$(find simulated_robot)/localization/fake_localization.launch" />
+        
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" >
+        <param name="controller_frequency" value="10.0" />
+        <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+        <param name="base_global_planner" value="navfn/NavfnROS" />
+        <rosparam file="$(find simulated_robot)/planning/costmap_common_params.yaml" 
+            command="load" ns="global_costmap" /> 
+        <rosparam file="$(find simulated_robot)/planning/costmap_common_params.yaml" 
+            command="load" ns="local_costmap" /> 
+        <rosparam file="$(find simulated_robot)/planning/local_costmap_params.yaml" 
+            command="load" /> 
+        <rosparam file="$(find simulated_robot)/planning/global_costmap_params.yaml" 
+            command="load" /> 
+        <rosparam file="$(find simulated_robot)/planning/base_local_planner_params.yaml" 
+            command="load" /> 
+        <rosparam file="$(find simulated_robot)/planning/base_global_planner_params.yaml" 
+            command="load" />            
+    </node>
+
+</launch>

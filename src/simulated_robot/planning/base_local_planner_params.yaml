@@ -1,0 +1,16 @@
+TrajectoryPlannerROS:
+  meter_scoring: true
+
+  # set velocity limits of robot
+  max_vel_x: 3.0 
+  min_vel_x: 0.1
+  max_vel_theta: 1.0
+  min_in_place_vel_theta: 0.4
+
+  # set acceleration limits of robot
+  acc_lim_theta: 3.2
+  acc_lim_x: 2.5
+  acc_lim_y: 2.5
+  
+  # whether or not to allow strafing
+  holonomic_robot: false

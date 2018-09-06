@@ -1,0 +1,18 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<launch>
+    <arg name="frame_id" default="base_link" />
+    <arg name="child_frame_id" default="laser_frame" />
+    <arg name="x" default="-0.064" />
+    <arg name="y" default="0.0" />
+    <arg name="z" default="0.122" />
+    <arg name="qx" default="0.0" />
+    <arg name="qy" default="0.0" />
+    <arg name="qz" default="0.0" />
+    <arg name="qw" default="1.0" />
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="laser_transform_broadcaster" 
+        args="$(arg x) $(arg y) $(arg z) $(arg qx) $(arg qy) $(arg qz) $(arg qw) $(arg frame_id) $(arg child_frame_id)" />
+
+</launch>

@@ -1,0 +1,26 @@
+<launch>
+    <arg name="robot_count" default="3" />
+    <arg name="simulator_thread_count" default="4" />
+    <arg name="port_base" default="17000" />
+    <arg name="robot_target_prefix" default="robot-nimbro-" />
+    <arg name="robot_prefix" default="hackbot" />
+    <arg name="protocol" default="tcp" />
+    <arg name="simulator_callback_timeout" default="0.1" />
+    <arg name="argos_world_file" default="construct.argos" />
+
+    <rosparam param="use_sim_time">true</rosparam>
+
+    <node name="simulator_nimbro" pkg="simulator_nimbro" type="run.sh" args="$(arg robot_count)
+        $(arg port_base)
+        $(arg robot_target_prefix)
+        $(arg robot_prefix)
+        $(arg protocol)"
+        output="screen" required="true"/>
+
+    <node name="simulator" pkg="argos_bridge" type="simulator_starter.sh" args="$(arg robot_count)
+        $(arg simulator_thread_count)
+        $(arg robot_prefix)
+        $(arg simulator_callback_timeout)
+        $(arg argos_world_file)"
+        output="screen" required="true"/>
+</launch>

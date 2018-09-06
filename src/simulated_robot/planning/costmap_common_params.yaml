@@ -1,0 +1,36 @@
+# referenced footprint from:
+# https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/param/costmap_common_params_waffle_pi.yaml
+footprint: [[-0.205, -0.155], [-0.205, 0.155], [0.077, 0.155], [0.077, -0.155]]
+
+footprint_padding: 0.01
+subscribe_to_updates: true
+
+plugins:
+     - {name: static_layer,            type: "costmap_2d::StaticLayer"}
+     - {name: obstacle_layer,          type: "costmap_2d::ObstacleLayer"}
+     - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
+
+static_layer:
+    enabled: true
+    track_unknown_space: true
+    map_topic: 'map'
+    
+obstacle_layer: 
+  enabled: true
+  obstacle_range: 1.0 #robot will only update map for obstacles within 2.5 meters
+  raytrace_range: 3.0 #robot will try to clear out space in front of it up to 3.0 meters
+  track_unknown_space: true
+  observation_sources: laser_scan_sensor
+
+  laser_scan_sensor: 
+    sensor_frame: 'laser_frame'
+    data_type: LaserScan
+    topic: 'scan'
+    inf_is_valid: true
+    marking: true
+    clearing: true
+
+inflation_layer:
+  enabled: true
+  cost_scaling_factor: 3.0
+  inflation_radius: 1.0 #robot will treat paths X meters away from obstacles as equal cost

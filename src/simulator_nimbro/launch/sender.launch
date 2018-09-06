@@ -1,0 +1,25 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<launch>
+    <arg name="ns" />
+    <arg name="target" default="localhost" />
+    <arg name="target_port" default="17000" />
+    <arg name="sender_name" default="tcp_sender" />
+    <arg name="protocol" default="tcp" />
+
+    <!-- The Message sender node -->
+    <node name="$(arg sender_name)" pkg="nimbro_topic_transport" type="$(arg protocol)_sender" output="screen" >
+
+        <!-- The destination host name or IP address -->
+        <param name="destination_addr" value="$(arg target)" />
+        <param name="destination_port" value="$(arg target_port)" />
+
+        <!-- Load the list of topics from a YAML file -->
+        <rosparam command="load" file="$(find simulator_nimbro)/launch/topics.yaml" />
+
+        <remap from="/scan" to="/$(arg ns)/scan" />
+        <remap from="/odom" to="/$(arg ns)/odom" />
+        <remap from="/odom_tf" to="/$(arg ns)/odom_tf" />
+    </node>
+</launch>
