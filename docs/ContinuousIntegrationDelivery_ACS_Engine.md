@@ -58,7 +58,7 @@
 
 <img src="../images/cicd_copyFileSettings.png" alt="CICD Copy File Settings" width="1200" />
 
-<img src="(../images/cicd_publish.png" alt="CICD Publish" width="1200">
+<img src="../images/cicd_publish.png" alt="CICD Publish" width="1200">
 
 <img src="../images/cicd_publishSetting.png" alt="CICD Publish Setting" width="1200">
 
