@@ -1,16 +1,30 @@
+# Values reference official Turtlebot nav:
+# https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/param/base_local_planner_params.yaml
+
 TrajectoryPlannerROS:
   meter_scoring: true
 
   # set velocity limits of robot
-  max_vel_x: 3.0 
-  min_vel_x: 0.1
+  max_vel_x: 1.0 #0.18 in official nav, increased for faster testing (temp)
+  min_vel_x: 0.08
   max_vel_theta: 1.0
-  min_in_place_vel_theta: 0.4
+  min_vel_theta: -1.0
+  min_in_place_vel_theta: 1.0
 
   # set acceleration limits of robot
-  acc_lim_theta: 3.2
-  acc_lim_x: 2.5
-  acc_lim_y: 2.5
+  acc_lim_theta: 10.0 #0.6 in official nav, increased to fix too much turning
+  acc_lim_x: 1.0
+  acc_lim_y: 0.0
+
+  # goal tolerance
+  xy_goal_tolerance: 0.10
+  yaw_goal_tolerance: 0.05
   
   # whether or not to allow strafing
   holonomic_robot: false
+
+  # forward simulation
+  sim_time: 0.8
+  vx_samples: 18
+  vtheta_samples: 20
+  sim_granularity: 0.05

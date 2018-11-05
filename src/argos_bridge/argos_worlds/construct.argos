@@ -37,77 +37,32 @@
   <!-- * Arena configuration * -->
   <!-- *********************** -->
   <arena size="63.9000, 56.3000, 1" center="31.9500,28.1500,0.5">
-    <box id="wall0" size="49.4000,0.2500,1" movable="false">
-      <body position="31.7500,51.4750,0" orientation="0,0,0" />
+    <box id="wall0" size="63.9000,4.9500,1" movable="false">
+      <body position="31.9500,53.8250,0" orientation="0,0,0" />
     </box>
-    <box id="wall1" size="19.4000,0.2500,1" movable="false">
-      <body position="23.6500,47.2750,0" orientation="0,0,0" />
+    <box id="wall1" size="19.4000,9.0500,1" movable="false">
+      <body position="23.6500,42.8750,0" orientation="0,0,0" />
     </box>
-    <box id="wall2" size="5.4500,0.2500,1" movable="false">
-      <body position="43.3750,46.6750,0" orientation="0,0,0" />
+    <box id="wall2" size="5.4500,15.8000,1" movable="false">
+      <body position="43.3750,38.9000,0" orientation="0,0,0" />
     </box>
-    <box id="wall3" size="0.2500,8.5500,1" movable="false">
-      <body position="14.0750,42.8750,0" orientation="0,0,0" />
+    <box id="wall3" size="35.2000,4.4500,1" movable="false">
+      <body position="35.1000,20.5250,0" orientation="0,0,0" />
     </box>
-    <box id="wall4" size="0.2500,8.5500,1" movable="false">
-      <body position="33.2250,42.8750,0" orientation="0,0,0" />
+    <box id="wall4" size="3.1500,23.1500,1" movable="false">
+      <body position="12.3750,19.7750,0" orientation="0,0,0" />
     </box>
-    <box id="wall5" size="19.4000,0.2500,1" movable="false">
-      <body position="23.6500,38.4750,0" orientation="0,0,0" />
+    <box id="wall5" size="7.3000,2.9000,1" movable="false">
+      <body position="49.5500,9.4000,0" orientation="0,0,0" />
     </box>
-    <box id="wall6" size="0.2500,15.3000,1" movable="false">
-      <body position="40.7750,38.9000,0" orientation="0,0,0" />
+    <box id="wall6" size="7.3000,46.0000,1" movable="false">
+      <body position="3.6500,28.3500,0" orientation="0,0,0" />
     </box>
-    <box id="wall7" size="0.2500,15.3000,1" movable="false">
-      <body position="45.9750,38.9000,0" orientation="0,0,0" />
+    <box id="wall7" size="7.7000,46.0000,1" movable="false">
+      <body position="60.0500,28.3500,0" orientation="0,0,0" />
     </box>
-    <box id="wall8" size="3.1500,0.2500,1" movable="false">
-      <body position="12.3750,31.2250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall9" size="5.4500,0.2500,1" movable="false">
-      <body position="43.3750,31.1250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall10" size="35.2000,0.2500,1" movable="false">
-      <body position="35.1000,22.6250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall11" size="0.2500,3.9500,1" movable="false">
-      <body position="17.6250,20.5250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall12" size="0.2500,3.9500,1" movable="false">
-      <body position="52.5750,20.5250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall13" size="35.2000,0.2500,1" movable="false">
-      <body position="35.1000,18.4250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall14" size="7.3000,0.2500,1" movable="false">
-      <body position="49.5500,10.7250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall15" size="0.2500,22.6500,1" movable="false">
-      <body position="10.9250,19.7750,0" orientation="0,0,0" />
-    </box>
-    <box id="wall16" size="0.2500,22.6500,1" movable="false">
-      <body position="13.8250,19.7750,0" orientation="0,0,0" />
-    </box>
-    <box id="wall17" size="3.1500,0.2500,1" movable="false">
-      <body position="12.3750,8.3250,0" orientation="0,0,0" />
-    </box>
-    <box id="wall18" size="0.2500,2.4000,1" movable="false">
-      <body position="46.0250,9.4000,0" orientation="0,0,0" />
-    </box>
-    <box id="wall19" size="0.2500,2.4000,1" movable="false">
-      <body position="53.0750,9.4000,0" orientation="0,0,0" />
-    </box>
-    <box id="wall20" size="7.3000,0.2500,1" movable="false">
-      <body position="49.5500,8.0750,0" orientation="0,0,0" />
-    </box>
-    <box id="wall21" size="0.2500,46.0000,1" movable="false">
-      <body position="7.1750,28.3500,0" orientation="0,0,0" />
-    </box>
-    <box id="wall22" size="0.2500,46.0000,1" movable="false">
-      <body position="56.3250,28.3500,0" orientation="0,0,0" />
-    </box>
-    <box id="wall23" size="49.4000,0.2500,1" movable="false">
-      <body position="31.7500,5.2250,0" orientation="0,0,0" />
+    <box id="wall8" size="63.9000,5.3500,1" movable="false">
+      <body position="31.9500,2.6750,0" orientation="0,0,0" />
     </box>
     
     <distribute>
@@ -147,5 +102,6 @@
       <camera>
         <placement idx="0" position="0,0,79.875" look_at="0,0,0" lens_focal_length="2" />
       </camera>
+    </qt-opengl>
   </visualization-->
 </argos-configuration>
