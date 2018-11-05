@@ -34,7 +34,7 @@ There is no need to push the images to a registry.
 
 On success, the output will look like:
 
-![Docker Compose Success Log](../images/dockerComposeSuccess.png =500x)
+<img src="../images/dockerComposeSuccess.png" alt="Docker Compose Success Log" width="500">
 
 ### View logs
 
