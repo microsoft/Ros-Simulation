@@ -76,7 +76,7 @@ To create a release, from the root folder run
 
 This result will look similar to
 
-<img src="../images/helmInstallResult.png" alt="Helm install chart result" width="600">
+<img src="../images/helmInstallResult.PNG" alt="Helm install chart result" width="600">
 
 ## Upgrade Helm Release (if needed)
 
