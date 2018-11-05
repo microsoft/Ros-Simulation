@@ -28,7 +28,7 @@ Run the following command, or the [createSecret.ps1](../scripts/createSecret.ps1
 
 The appId and password come from the service principal created in [Cluster Creation](ClusterCreation_ACS-Engine.md). The docker-email parameter can be any email. It does not need to be associated with a Docker or Azure account. Find the ACR login server in the azure portal.
 
-![](../images/acrLoginServer.png =x200)
+<img src="../images/acrLoginServer.png" alt="ACR Login Server" height="200" />
 
 ## Add Dedicated Node for Simulator
 

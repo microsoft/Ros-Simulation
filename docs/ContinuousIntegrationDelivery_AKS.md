@@ -4,7 +4,7 @@
 
 * Under your project in VSTS, click "Build and release", and then click "New" to create a *build*
 
-![Create CICD Pipeline](../images/cicd_createPipeline.png =1200x)
+<img src="../images/cicd_createPipeline.png" alt="Create CICD Pipeline" width="1200" />
 
 * Select "VSTS Git" and link this *build* to your code repository
 
@@ -12,7 +12,7 @@
 
 * Select "Empty process" to create an empty template
 
-![CICD Create Empty Process](../images/cicd_createEmptyProcess.png =1200x)
+<img src="../images/cicd_createEmptyProcess.png" alt="CICD Create Empty Process" width="1200" />
 
 * Type in the *build* name
 
@@ -30,11 +30,11 @@
 
 * Select "Docker" for the settings related to docker images
 
-![CICD Create Docker](../images/cicd_createDocker.png =1200x)
+<img src="../images/cicd_createDocker.png" alt="CICD Create Docker" width="1200" />
 
 * Build a docker image for *robot*
 
-![CICD Build Robot Docker Image](../images/cicd_buildRobot.png =1200x)
+<img src="../images/cicd_buildRobot.png" alt="CICD Build Robot Docker Image" width="1200" />
 
 * Push the *robot* docker image to Azure Container Registry
 
@@ -42,7 +42,7 @@
 
 * Build a docker image for *simulator*
 
-![CICD Build Simulation Docker Image](../images/cicd_buildSimulation.png =1200x)
+<img src="../images/cicd_buildSimulation.png" alt="CICD Build Simulation Docker Image" width="1200" />
 
 * Push the *simulator* docker image to Azure Container Registry
 
@@ -50,9 +50,9 @@
 
 * Copy the helm chart files from *build* to *release*
 
-![CICD Copy Files](../images/cicd_copyFiles.png =1200x)
+<img src="../images/cicd_copyFiles.png" alt="CICD Copy Files" width="1200" />
 
-![CICD Copy File Settings](../images/cicd_copyFileSettings.png =1200x)
+<img src="../images/cicd_copyFileSettings.png" alt="CICD Copy File Settings" width="1200" />
 
 ![CICD Publish](../images/cicd_publish.png =1200x)
 
@@ -66,7 +66,7 @@
 
 * Select "Empty process" to create an empty template
 
-![CICD Create Empty process](../images/cicd_emptyProcess.png =1200x)
+<img src="../images/cicd_emptyProcess.png" alt="CICD Create Empty process" width="1200" />
 
 * Set a name to your *release*
 
@@ -74,7 +74,7 @@
 
 * Link the artifact from *build*
 
-![CICD Link Artifact](../images/cicd_artifact.png =1200x)
+<img src="../images/cicd_artifact.png" alt="CICD Link Artifact" width="1200" />
 
 * In the empty template, install "helm" tool to k8s cluster
 
@@ -82,7 +82,7 @@
 
 * Set the "helm" and connect to your k8s cluster
 
-![CICD Helm Set AKS](../images/cicd_helmInitSetAKS.png =1200x)
+<img src="../images/cicd_helmInitSetAKS.png" alt="CICD Helm Set AKS" width="1200" />
 
 * Set "Helm upgrade" to deploy your helm chart to your k8s cluster
 

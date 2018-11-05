@@ -65,7 +65,7 @@ For example,
 
 Find the ACR login sever in the Azure Portal
 
-![ACR Login Server](../images/acrLoginServer.png =x200)
+<img src="../images/acrLoginServer.png" alt="ACR Login Server" height="200" />
 
 ## Push Docker Images
 
@@ -84,7 +84,7 @@ Find the ACR login sever in the Azure Portal
 
 To view the Docker images in the Azure portal, go to the ACR -> Repositories.
 
-![ACR Repositories](../images/acrRepository.png =400x)
+<img src="../images/acrRepository.png" alt="ACR Repositories" width="400" />
 
 ## Helpful Tips
 
