@@ -27,7 +27,7 @@ There are two main containers that run in the simulation. In general, the follow
 
 In the Azure Portal, create a new "Container Registry" resource.  Pick a name for the registry, a new or existing resource group and a region. All other default selections can be left as-is.
 
-![ACR Creation](../images/createAcr.png =300x)
+<img src="../images/createAcr.png" alt="ACR Creation" width="300">
 
 ## Dockerfiles
 
