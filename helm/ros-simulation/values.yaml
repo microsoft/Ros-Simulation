@@ -21,13 +21,13 @@ argosLaunchFile: "construct.argos"
 vncPassword: "vncpassword"
 
 simulatorImage:
-  repository: xiouacr.azurecr.io/simulator
-  tag: "10.0"
+  repository: contoso.azurecr.io/simulator
+  tag: latest
   pullPolicy: Always
 
 robotImage:
-  repository: xiouacr.azurecr.io/robot
-  tag: "10.0"
+  repository: contoso.azurecr.io/robot
+  tag: latest
   pullPolicy: Always
 
 # Resources for robot containers
