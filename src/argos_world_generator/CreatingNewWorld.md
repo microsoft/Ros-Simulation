@@ -4,7 +4,7 @@
 
 Create or locate a diagram to represent your map. The Arena will be the light color space. Dark color spaces will be walls, and grey areas will become boxes. For example (not to scale):
 
-![Sample Map](map-test.png =600x)
+<img src="map-test.png" alt="Sample Map" width="600" />
 
 The ability of the World Generator code to identify walls will be based on the color of your map. For best results, have very light open areas (white) and dark walls/obstacles (black). If you wish to modify this, adjust the OCCUPANCY_THRESHOLD in [worldGenerator.js](worldGenerator.js).
 
