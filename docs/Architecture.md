@@ -39,7 +39,7 @@ The common pattern for running multiple robots in simulation for ROS is to share
 
 ### Common configuration
 
-![Single Ros Core](../images/arch_SingleRosCore.png =500x)
+<img src="../images/arch_SingleRosCore.png" alt="Single Ros Core" width="500" />
 
 This design has four inherent challenges:
 
@@ -52,7 +52,7 @@ To avoid these issues, we ran each robot with its own ros master, which meant th
 
 ### Our configuration
 
-![Multiple Ros Cores](../images/arch_MultipleRosCore.png =500x)
+<img src="../images/arch_MultipleRosCore.png" alt="Multiple Ros Cores" width="500" />
 
 Each of the robots maintains their own ROS master, and their topics are mapped to namespaced topics on the simulator. The topic transport and mapping is accomplished using Nimbro (see [Networking](#Networking)).
 

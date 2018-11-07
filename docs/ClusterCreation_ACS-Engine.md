@@ -55,7 +55,7 @@ There are two approaches to get the corresponding secret of the service principa
   - __KEYVAULT_NAME__ is the *Azure Key Vault* name
   - __SERVICE_PRINCIPAL_SECRET_NAME__ is the secret name you used to store the service principal secret in *Azure Key Vault*
 
-![CICD Subscription](../images/cicd_setScript.png =600x)
+<img src="../images/cicd_setScript.png" alt="CICD Subscription" width="600">
 
 ### Step 3 Review VM sizes and the number of nodes
 
@@ -87,7 +87,7 @@ To use kubernetes commands locally,
 
     The output will look like the following:
 
-![Cluster Info Output](../images/clusterinfo.png =1200x)
+<img src="../images/clusterinfo.png" alt="Cluster Info Output" width="1200">
 
 - Get the k8s node information. You will see __one__ master node, __one__ simulator node, and __N__ number of robotpool nodes.
     > ```kubectl get nodes```

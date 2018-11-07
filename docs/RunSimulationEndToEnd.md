@@ -28,7 +28,7 @@ Run the following command, or the [createSecret.ps1](../scripts/createSecret.ps1
 
 The appId and password come from the service principal created in [Cluster Creation](ClusterCreation_ACS-Engine.md). The docker-email parameter can be any email. It does not need to be associated with a Docker or Azure account. Find the ACR login server in the azure portal.
 
-![](../images/acrLoginServer.png =x200)
+<img src="../images/acrLoginServer.png" alt="ACR Login Server" height="200" />
 
 ## Add Dedicated Node for Simulator
 
@@ -76,7 +76,7 @@ To create a release, from the root folder run
 
 This result will look similar to
 
-![Helm install chart result](../images/helmInstallResult.png =600x)
+<img src="../images/helmInstallResult.PNG" alt="Helm install chart result" width="600">
 
 ## Upgrade Helm Release (if needed)
 
@@ -113,7 +113,7 @@ To verify that the simulation is running correctly, check the logs for the simul
 
 Sample logs for the simulator node showing Real Time Factor:
 
-![Simulator Node Logs](../images/realTimeFactor.png =600x)
+<img src="../images/realTimeFactor.png" alt="Simulator Node Logs" width="600">
 
 ## Modifying the Simulation
 
@@ -136,7 +136,7 @@ If the node crashes, view the logs from the previous container instantiation usi
 
 Sometimes the Kubernetes pods cannot pull the Docker image. The result will look like
 
-![Unsuccessful docker image pull](../images/imagePullBackoff.png  =500x)
+<img src="../images/imagePullBackoff.png" alt="Unsuccessful docker image pull" width="500">
 
 To resolve,
 1. Verify that the name and tag of the images in the [values.yaml](../helm/ros-simulation/values.yaml) match those the pods should pull

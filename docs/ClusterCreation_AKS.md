@@ -13,7 +13,7 @@ This doc assumes that these steps have already been completed
 
 In the Azure portal, create an Azure Kubernetes Service (AKS).
 
-![AKS Creation](../images/createAKSCluster.PNG =600x)
+<img src="../images/createAKSCluster.PNG" alt="AKS Creation" width="600">
 
 Choose the number of nodes and type of machines. These can be changed later if needed. The smallest boxes are not recommended since the simulator box will need more compute power than the robots to run, and AKS does not currently support creating a cluster with different type of vms.
 

@@ -12,7 +12,7 @@ To enable visualization, uncomment the `<visualization>` section in the [constru
 
 Uncommented visualization tag:
 
-![Uncommanted visualization code](../images/Viz_UncommentedVisualization.png =x500)
+<img src="../images/Viz_UncommentedVisualization.png" alt="Uncommented visualization code" height="500" />
 
 ## Step 2: Build/Push the simulator image
 
@@ -36,14 +36,14 @@ Follow the instructions in [Run Simulation End to End](./RunSimulationEndToEnd.m
 
 1. Connect to localhost:5901 using VNC Client.
 
-    ![VNC View connected to local host port 5901](../images/Viz_VncViewerLocalhost.png =x500)
+    <img src="../images/Viz_VncViewerLocalhost.png" alt="VNC View connected to local host port 5901" height="500" />
 
 1. Enter the VNC Password:
 
-    ![Enter password](../images/Viz_VncPassword.png =x500)
+    <img src="../images/Viz_VncPassword.png" alt="Enter password" height="500" />
 
 1. Start the simulation:
 
     >**The simulator will not run automatically when using visualization. It must be started by pressing the Play button.**
 
-    ![Start Visualization](../images/Viz_ArgosVisualization.png =x500)
+    <img src="../images/Viz_ArgosVisualization.png" alt="Start Visualization" height="500" />
