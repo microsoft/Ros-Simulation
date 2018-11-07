@@ -5,8 +5,3 @@ global_costmap:
   transform_tolerance: 1.0   # Tolerable delay 
   static_map: true #whether or not costmap should init with map from map_server
   map_topic: 'map'
-  width: 83.35 #width of costmap
-  height: 172.95 #height of costmap
-  resolution: 0.05 #meters/cell, usually resolution is same as resolution of static map
-  origin_x: -41.675 
-  origin_y: -86.475

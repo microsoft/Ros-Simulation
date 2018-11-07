@@ -29,6 +29,8 @@ RUN /bin/bash -c "apt-get update \
         --skip-keys=config_server --skip-keys=plot_msgs --skip-keys=catch_ros # ignore soft dependencies \
     && rm -rf /var/lib/apt/lists/*"
 
+RUN apt-get update && apt-get upgrade -y
+
 RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash \
     && catkin_make install"
 

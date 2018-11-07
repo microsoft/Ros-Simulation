@@ -12,9 +12,9 @@
  **/
 
 const Real TURTLEBOT_MAX_FORCE      = 15.0f; // missing
-const Real TURTLEBOT_MAX_TORQUE     = 10.0f; // wheel torque
-const Real TURTLEBOT_MAX_PAYLOAD    = 30000.0f; // grams 
-const Real TURTLEBOT_MASS           = 1800.0f; // grams
+const Real TURTLEBOT_MAX_TORQUE     = 150.0f; // wheel torque
+const Real TURTLEBOT_MAX_PAYLOAD    = 30.0f; // kilograms 
+const Real TURTLEBOT_MASS           = 1.8f; // kilograms
 const Real TURTLEBOT_MAX_TRANSLATIONAL_VEL = 0.26f; // m/s 
 const Real TURTLEBOT_MAX_ROTATIONAL_VEL = 1.82f; //rad/s
 

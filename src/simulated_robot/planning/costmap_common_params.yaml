@@ -17,8 +17,8 @@ static_layer:
     
 obstacle_layer: 
   enabled: true
-  obstacle_range: 1.0 #robot will only update map for obstacles within 2.5 meters
-  raytrace_range: 3.0 #robot will try to clear out space in front of it up to 3.0 meters
+  obstacle_range: 1.0 #robot will only update map for obstacles within x meters
+  raytrace_range: 3.0 #robot will try to clear out space in front of it up to x meters
   track_unknown_space: true
   observation_sources: laser_scan_sensor
 
@@ -33,4 +33,4 @@ obstacle_layer:
 inflation_layer:
   enabled: true
   cost_scaling_factor: 3.0
-  inflation_radius: 1.0 #robot will treat paths X meters away from obstacles as equal cost
+  inflation_radius: 2.0 #robot will treat paths X meters away from obstacles as equal cost
