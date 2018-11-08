@@ -11,8 +11,8 @@
  *https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_description/urdf/turtlebot3_waffle_pi.gazebo.xacro
  **/
 
-const Real TURTLEBOT_MAX_FORCE      = 15.0f; // missing
-const Real TURTLEBOT_MAX_TORQUE     = 150.0f; // wheel torque
+const Real TURTLEBOT_MAX_FORCE      = 300.0f; // set constraint for linear velocity
+const Real TURTLEBOT_MAX_TORQUE     = 10.0f; // wheel torque
 const Real TURTLEBOT_MAX_PAYLOAD    = 30.0f; // kilograms 
 const Real TURTLEBOT_MASS           = 1.8f; // kilograms
 const Real TURTLEBOT_MAX_TRANSLATIONAL_VEL = 0.26f; // m/s 

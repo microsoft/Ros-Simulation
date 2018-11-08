@@ -6,8 +6,8 @@
         
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" >
         <param name="controller_frequency" value="10.0" />
-        <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
         <param name="base_global_planner" value="navfn/NavfnROS" />
+        <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
         <rosparam file="$(find simulated_robot)/planning/costmap_common_params.yaml" 
             command="load" ns="global_costmap" /> 
         <rosparam file="$(find simulated_robot)/planning/costmap_common_params.yaml" 
@@ -16,7 +16,7 @@
             command="load" /> 
         <rosparam file="$(find simulated_robot)/planning/global_costmap_params.yaml" 
             command="load" /> 
-        <rosparam file="$(find simulated_robot)/planning/base_local_planner_params.yaml" 
+        <rosparam file="$(find simulated_robot)/planning/dwa_local_planner_params.yaml"
             command="load" /> 
         <rosparam file="$(find simulated_robot)/planning/base_global_planner_params.yaml" 
             command="load" />            
