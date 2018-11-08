@@ -56,7 +56,7 @@ namespace argos {
                                                 TURTLEBOT_BASE_LENGTH,
                                                 TURTLEBOT_BASE_WIDTH));
             m_ptBaseShape->e = 0.0; // No elasticity
-            m_ptBaseShape->u = 0.7; // Lots of friction
+            m_ptBaseShape->u = 0.1; // Friction
             /* Constrain the actual base body to follow the diff steering control */
             m_cDiffSteering.AttachTo(m_ptActualBaseBody);
 
