@@ -1,0 +1,38 @@
+# Build a Docker image
+# Build a Docker image to run, deploy, or push to a container registry.
+# Add steps that use Docker Compose, tag images, push to a registry, run an image, and more:
+# https://docs.microsoft.com/vsts/pipelines/languages/docker
+
+name: Ros-Simulation-CI
+
+queue: 'Hosted Linux Preview'
+
+trigger:
+  branches:
+    include:
+    - master
+
+variables:
+  simulatorBaseImageName: 'argos-base'
+  simulatorImageName: 'simulator:$(build.buildId)'
+  robotImageName: 'robot:$(build.buildId)'
+
+steps:
+- script: docker build -f ./argos/Dockerfile -t $(simulatorBaseImageName) .
+  displayName: 'docker build $(simulatorBaseImageName)'
+
+- script: docker build -f ./Dockerfile-argos -t $(registry)/$(simulatorImageName) .
+  displayName: 'docker build $(simulatorImageName)'
+
+- script: docker build -f ./Dockerfile-robot -t $(registry)/$(robotImageName) .
+  displayName: 'docker build $(robotImageName)'
+
+- script: |
+    docker login $(registry) -u $(registry-username) -p $(registry-password)
+    docker push $(registry)/$(simulatorImageName)
+  displayName: 'docker push $(registry)/$(simulatorImageName)'
+
+- script: |
+    docker login $(registry) -u $(registry-username) -p $(registry-password)
+    docker push $(registry)/$(robotImageName)
+  displayName: 'docker push $(registry)/$(robotImageName)'
