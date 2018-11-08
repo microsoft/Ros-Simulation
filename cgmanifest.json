@@ -33,7 +33,8 @@
             "component": {
                 "type": "git",
                 "git": {
-                    "repositoryUrl": "https://github.com/qt/qt5.git"
+                    "repositoryUrl": "https://github.com/qt/qt5.git",
+                    "commitHash": "3debc56a2d949a12c57c1c8ec726953fe10369c9"
                 }
             }
         },
@@ -207,7 +208,7 @@
                 "type": "git",
                 "git": {
                     "repositoryUrl": "https://github.com/ros-visualization/rqt.git",
-                    "commitHash": false
+                    "commitHash": "ffcab927b4c1a1b359e269012057b3048a9af685"
                 }
             }
         },
