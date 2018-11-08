@@ -1,0 +1,14 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<launch>
+    <rosparam param="use_sim_time">true</rosparam>
+
+    <!-- Listing to a robot $i, and the opening port is 17000 + $i -->
+    <include file="$(find simulator_nimbro)/launch/receivers.launch" >
+    </include>
+
+    <!-- send to robot $i, and the robot is listening to port 17000 -->
+    <include file="$(find simulator_nimbro)/launch/senders.launch" >
+    </include>
+</launch>

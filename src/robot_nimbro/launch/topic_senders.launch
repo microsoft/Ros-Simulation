@@ -1,0 +1,19 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<launch>
+    <arg name="target" default="simulator-nimbro-0" />
+    <arg name="port" default="17000" />
+    <arg name="protocol" default="tcp" />
+
+    <!-- The Message sender node -->
+    <node name="$(arg protocol)_sender_robot" pkg="nimbro_topic_transport" type="$(arg protocol)_sender" output="screen">
+
+        <!-- The destination host name or IP address -->
+        <param name="destination_addr" value="$(arg target)" />
+        <param name="destination_port" value="$(arg port)" />
+
+        <!-- Load the list of topics from a YAML file -->
+        <rosparam command="load" file="$(find robot_nimbro)/launch/cmd_vel_topic.yaml" />
+    </node>
+</launch>

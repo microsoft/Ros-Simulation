@@ -1,0 +1,11 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+     
+<launch>
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping" args="scan:==scan" output="screen" >
+        <param name="map_frame" value="map"/>
+        <param name="odom_frame" value="odom"/>
+        <param name="base_frame" value="base_link"/>
+        <param name="delta" value="0.1"/>
+    </node>
+</launch>

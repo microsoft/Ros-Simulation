@@ -1,0 +1,5 @@
+topics:
+  - name: "/odom"
+  - name: "/odom_tf"
+  - name: "/scan" 
+  - name: "/clock"

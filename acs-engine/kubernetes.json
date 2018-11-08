@@ -1,0 +1,42 @@
+{
+    "apiVersion": "vlabs",
+    "properties": {
+      "orchestratorProfile": {
+        "orchestratorType": "Kubernetes",
+        "orchestratorVersion": ""
+      },
+      "masterProfile": {
+        "count": 1,
+        "dnsPrefix": "",
+        "vmSize": ""
+      },
+      "agentPoolProfiles": [
+        {
+          "name": "simulator",
+          "count": 1,
+          "vmSize": "",
+          "acceleratedNetworkingEnabled": true
+        },
+        {
+          "name": "robotpool",
+          "count": 10,
+          "vmSize": "",
+          "acceleratedNetworkingEnabled": true
+        }
+      ],
+      "linuxProfile": {
+        "adminUsername": "azureuser",
+        "ssh": {
+          "publicKeys": [
+            {
+              "keyData": ""
+            }
+          ]
+        }
+      },
+      "servicePrincipalProfile": {
+        "clientId": "",
+        "secret": ""
+      }
+    }
+  }

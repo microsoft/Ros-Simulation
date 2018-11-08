@@ -1,0 +1,36 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ARGoS World Generator</title>
+        <script type="text/javascript" src="worldGenerator.js"></script>
+        <link rel="stylesheet" type="text/css" href="worldGenerator.css">
+    </head>
+
+    <body onload="LoadImageToCanvas()">
+        <form>
+            X offset:<br>
+            <input type="number" id="xOffset" name="xOffset" value="0" min="0" step="1" autofocus /><br>
+            Y offset:<br>
+            <input type="number" id="yOffset" name="yOffset" value="0" min="0" step="1" />
+            <button id="generateButton" type="button" onclick="GenerateXML()">Generate XML</button>
+            <button id="defaultOffsetsButton" type="button" onclick="SetDefaultOffsets()">Default Offsets</button>
+            <div class="instructions">Instructions<br/>
+                Copy the output below and save with the extension .argos
+
+            </div>
+          </form>
+        <br/>
+
+        <!-- canvas width and height should be set to the size of the image (in pixels) you are uploading -->
+        <canvas id="canvas" width="1278" height="1126"></canvas>
+
+        
+        <form>
+            <textarea id="output" rows="25" cols="40">
+            </textarea>
+        </form>
+    </body>
+</html>

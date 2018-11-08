@@ -1,0 +1,40 @@
+FROM ros:kinetic-ros-core
+
+# Install NIMBRO requirements
+RUN apt-get update \
+    && apt-get install -y \
+    qt4-qmake \
+    libqt4-dev \
+    && rm -rf /var/lib/apt/lists/*
+#END NIMBRO
+
+############### NIMBRO installation
+RUN git clone https://github.com/AIS-Bonn/nimbro_network /root/catkin_ws/src/ \
+    && cd /root/catkin_ws/src/ \
+    && git checkout 190761d69c0a67ef6fcc1ce15c69ee6765fbc1cf \
+    # remove unused packages
+    && rm -rf nimbro_cam_transport \
+    && rm -rf nimbro_log_transport \
+    && rm -rf nimbro_service_transport \
+    && rm -rf tf_throttle
+
+COPY src/argos_map /root/catkin_ws/src/argos_map
+COPY src/simulated_robot /root/catkin_ws/src/simulated_robot
+COPY src/robot_nimbro /root/catkin_ws/src/robot_nimbro
+
+WORKDIR /root/catkin_ws/
+
+RUN /bin/bash -c "apt-get update \
+    && rosdep install --from-paths src --ignore-src -y \
+        --skip-keys=config_server --skip-keys=plot_msgs --skip-keys=catch_ros # ignore soft dependencies \
+    && rm -rf /var/lib/apt/lists/*"
+
+RUN apt-get update && apt-get upgrade -y
+
+RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash \
+    && catkin_make install"
+
+# Useful for interactive bash, so that there is no need to set up workspace
+RUN echo "source /root/catkin_ws/devel/setup.bash" >> /root/.bashrc
+
+CMD ["/bin/bash"]

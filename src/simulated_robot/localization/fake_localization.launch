@@ -1,0 +1,11 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+     
+<launch>
+ <node pkg="fake_localization" type="fake_localization" name="fake_localization" output="screen" >
+    <param name="~odom_frame_id" value="odom" />
+    <param name="~base_frame_id" value="base_link"/>
+    <param name="~global_frame_id" value="map" />
+    <remap from="/base_pose_ground_truth" to="/odom" />
+ </node>
+</launch>

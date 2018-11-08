@@ -1,0 +1,60 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
+FROM argos-base
+
+ENV DISPLAY :1
+ENV DEBIAN_FRONTEND noninteractive
+
+############### xvnc / xfce installation
+RUN apt-get update \
+    && apt-get install -y xfce4 xfce4-goodies tightvncserver gettext-base \
+    && rm -rf /var/lib/apt/lists/*
+
+############### NIMBRO installation
+RUN git clone https://github.com/AIS-Bonn/nimbro_network /root/catkin_ws/src/ \
+    && cd /root/catkin_ws/src/ \
+    && git checkout 190761d69c0a67ef6fcc1ce15c69ee6765fbc1cf \
+    # remove unused packages
+    && rm -rf nimbro_cam_transport \
+    && rm -rf nimbro_log_transport \
+    && rm -rf nimbro_service_transport \
+    && rm -rf tf_throttle
+
+############### project-specific commands
+RUN apt-get update \
+    && apt-get install -y \
+        ros-kinetic-rqt-gui-cpp \
+        libqt4-dev \
+        qt4-qmake \
+        libyaml-cpp-dev \
+        ros-kinetic-tf2-msgs \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY src/argos_bridge/ /root/catkin_ws/src/argos_bridge
+COPY src/simulator_nimbro/ /root/catkin_ws/src/simulator_nimbro
+COPY src/argos_ground_truth_plugin/ /root/catkin_ws/src/argos_ground_truth_plugin
+COPY src/argos_lidar_plugin/ /root/catkin_ws/src/argos_lidar_plugin
+COPY src/argos_turtlebot3_wafflepi_plugin/ /root/catkin_ws/src/argos_turtlebot3_wafflepi_plugin
+
+RUN chmod +x /root/catkin_ws/src/simulator_nimbro/scripts/receiver.sh \
+    && chmod +x /root/catkin_ws/src/simulator_nimbro/scripts/sender.sh \
+    && chmod +x /root/catkin_ws/src/simulator_nimbro/scripts/run.sh \
+    && chmod +x /root/catkin_ws/src/argos_bridge/scripts/simulator_starter.sh
+WORKDIR /root/catkin_ws
+
+RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash \
+    && catkin_make install"
+
+ENV CATKIN_WS_PATH /root/catkin_ws
+
+############### copy files/folders and startup desktop
+ADD .vnc /root/.vnc
+COPY vncserver-startup.sh /root/scripts/vncserver-startup.sh
+RUN chmod +x /root/.vnc/xstartup /etc/X11/xinit/xinitrc /root/scripts/*.sh 
+
+# Useful for interactive bash, so that there is no need to set up workspace
+RUN echo "source /root/catkin_ws/devel/setup.bash \
+    && source src/argos_bridge/scripts/setupArgosEnv.sh" >> /root/.bashrc
+
+CMD ["/bin/bash", "-c", "/root/scripts/vncserver-startup.sh"]

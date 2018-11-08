@@ -1,0 +1,7 @@
+global_costmap:
+  global_frame: 'map'
+  robot_base_frame: 'base_link'
+  update_frequency: 1.0 #freq in Hz that costmap will run update loop
+  transform_tolerance: 1.0   # Tolerable delay 
+  static_map: true #whether or not costmap should init with map from map_server
+  map_topic: 'map'

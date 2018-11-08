@@ -1,14 +1,32 @@
+# Introduction
 
-# Contributing
+The ROS Simulator is an orchestration system created to simulate autonomous robots in a virtual world at high scale. This README outlines the tools and the steps required to modify, build, and deploy the project.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+For instructions for how to set up your simulation locally or on an Azure cluster, please refer to our docs:
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+## About the Project
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+* [Architecture](docs/Architecture.md)
+
+## Setting up Simulation
+
+* [Environment Setup](docs/EnvironmentSetup.md)
+* [Container Management](docs/ContainerManagement.md)
+* [Creating the Cluster with ACS Engine (recommended)](docs/ClusterCreation_ACS-Engine.md)
+* [Creating the Cluster with AKS (if needed)](docs/ClusterCreation_AKS.md)
+* [Scaling the Cluster](docs/ClusterScaling.md)
+
+## Running Simulation
+
+* [Run Simulation End to End](docs/RunSimulationEndToEnd.md)
+* [Validation and Troubleshooting](docs/ValidateAndTroubleshoot.md)
+* [View Visualization](docs/SimulationVisualization.md)
+
+## CI/CD
+
+* [Continuous Integration and Continuous Delivery Pipeline with ACS Engine](docs/ContinuousIntegrationDelivery_ACS_Engine.md)
+* [Continuous Integration and Continuous Delivery Pipeline with AKS](docs/ContinuousIntegrationDelivery_AKS.md)
+
+## Run on Local Machine (Not Recommended)
+
+* [Local Cluster Setup and Testing](docs/LocalSetupAndTesting.md)

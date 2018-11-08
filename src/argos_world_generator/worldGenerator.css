@@ -1,0 +1,12 @@
+/* Copyright (c) Microsoft Corporation. All rights reserved.
+   Licensed under the MIT License. */
+
+canvas {
+    border: 2px solid black;
+}
+#output {
+    width: 80%;
+}
+.instructions{
+    font-weight: bold;
+}
