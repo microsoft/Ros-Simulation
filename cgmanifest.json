@@ -7,12 +7,259 @@
                     "repositoryUrl": "https://github.com/xinyiou/argos3.git",
                     "commitHash": "83dcc4d0d09ef706651c590be4830ffc2f6e850b"
                 }
-            },
+            }
+        },
+        {
             "component": {
                 "type": "git",
                 "git": {
                     "repositoryUrl": "https://github.com/AIS-Bonn/nimbro_network ",
                     "commitHash": "190761d69c0a67ef6fcc1ce15c69ee6765fbc1cf"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "cmake",
+                    "Version": "3.2.14",
+                    "DownloadUrl": "https://cmake.org/files/v3.12/cmake-3.12.4.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "component": {
+                "type": "git",
+                "git": {
+                    "repositoryUrl": "https://github.com/qt/qt5.git",
+                    "commitHash": "3debc56a2d949a12c57c1c8ec726953fe10369c9"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "libfreeimage-dev",
+                    "Version": "3.17.0",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/universe/f/freeimage/freeimage_3.17.0+ds1.orig.tar.xz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "libfreeimageplus-dev",
+                    "Version": "3.17.0",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/universe/f/freeimage/freeimage_3.17.0+ds1.orig.tar.xz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "freeglut3-dev",
+                    "Version": "2.8.1",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/universe/f/freeglut/freeglut_2.8.1.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "libxi-dev",
+                    "Version": "1.7.6",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/libx/libxi/libxi_1.7.6.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "libxmu-dev",
+                    "Version": "1.1.2",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/libx/libxmu/libxmu_1.1.2.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "liblua5.2-dev",
+                    "Version": "5.2.4",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/l/lua5.2/lua5.2_5.2.4.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "lua5.2-dev",
+                    "Version": "5.2.4",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/l/lua5.2/lua5.2_5.2.4.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "doxygen",
+                    "Version": "1.8.11",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/d/doxygen/doxygen_1.8.11.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "graphviz",
+                    "Version": "2.38.0",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/g/graphviz/graphviz_2.38.0.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "graphviz-dev",
+                    "Version": "2.38.0",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/g/graphviz/graphviz_2.38.0.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "libgsl-dev",
+                    "Version": "2.1",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/g/gsl/gsl_2.1+dfsg.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "xfce4",
+                    "Version": "4.12.2",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/universe/x/xfce4/xfce4_4.12.2.tar.xz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "xfce4-goodies",
+                    "Version": "4.12.1",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/universe/x/xfce4-goodies/xfce4-goodies_4.12.1.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "tightvncserver",
+                    "Version": "1.3.19",
+                    "DownloadUrl": "https://www.tightvnc.com/download/1.3.10/tightvnc-1.3.10_unixsrc.tar.bz2"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "gettext-base",
+                    "Version": "0.19.7",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/g/gettext/gettext_0.19.7.orig.tar.xz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "component": {
+                "type": "git",
+                "git": {
+                    "repositoryUrl": "https://github.com/ros-visualization/rqt.git",
+                    "commitHash": "ffcab927b4c1a1b359e269012057b3048a9af685"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "libqt4-dev",
+                    "Version": "4.8.7",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/qt4-x11_4.8.7+dfsg.orig.tar.xz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "qt4-make",
+                    "Version": "4.8.7",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/main/q/qt4-x11/qt4-x11_4.8.7+dfsg.orig.tar.xz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "libyaml-cpp-dev",
+                    "Version": "0.5.2",
+                    "DownloadUrl": "http://archive.ubuntu.com/ubuntu/pool/universe/y/yaml-cpp/yaml-cpp_0.5.2.orig.tar.gz"
+                }
+            },
+            "DevelopmentDependency": false
+        },
+        {
+            "component": {
+                "type": "git",
+                "git": {
+                    "repositoryUrl": "https://github.com/ros/geometry2.git",
+                    "commitHash": "764804d8f489730c110e7d28dde682e8d1be3375"
+                }
+            }
+        },
+        {
+            "component": {
+                "type": "git",
+                "git": {
+                    "repositoryUrl": "https://github.com/osrf/docker_images.git",
+                    "commitHash": "55f03de3a06991c28a897982652dbafcb09d5592"
                 }
             }
         }
