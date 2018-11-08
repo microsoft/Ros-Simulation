@@ -69,7 +69,7 @@ CTurtleBotEntity::CTurtleBotEntity(const std::string &str_id,
 
         m_pcLIDARSensorEquippedEntity->AddSensorFan(
             CVector3(TURTLEBOT_LIDAR_FORWARD_OFFSET, TURTLEBOT_LIDAR_LEFT_OFFSET, TURTLEBOT_LIDAR_ELEVATION),
-            TURTLEBOT_LIDAR_RADIUS + TURTLEBOT_LIDAR_SENSORS_RING_RANGE.GetMin(),               //radius
+            0,                                                                                  //radius (set to 0, since tf only understands mount at single point)
             -TURTLEBOT_LIDAR_ANGLE_SPAN * 0.5,                                                  //start angle
             TURTLEBOT_LIDAR_ANGLE_SPAN * 0.5,                                                   //end angle
             TURTLEBOT_LIDAR_RADIUS + TURTLEBOT_LIDAR_SENSORS_RING_RANGE.GetMax(),               //range
@@ -128,7 +128,7 @@ void CTurtleBotEntity::Init(TConfigurationNode &t_tree)
         
         m_pcLIDARSensorEquippedEntity->AddSensorFan(
             CVector3(TURTLEBOT_LIDAR_FORWARD_OFFSET, TURTLEBOT_LIDAR_LEFT_OFFSET, TURTLEBOT_LIDAR_ELEVATION),
-            TURTLEBOT_LIDAR_RADIUS + TURTLEBOT_LIDAR_SENSORS_RING_RANGE.GetMin(),               //radius
+            0,                                                                                  //radius (set to 0, since tf only understands mount at single point)
             -TURTLEBOT_LIDAR_ANGLE_SPAN * 0.5,                                                  //start angle
             TURTLEBOT_LIDAR_ANGLE_SPAN * 0.5,                                                   //end angle
             TURTLEBOT_LIDAR_RADIUS + TURTLEBOT_LIDAR_SENSORS_RING_RANGE.GetMax(),               //range
