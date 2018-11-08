@@ -7,6 +7,13 @@
                     "repositoryUrl": "https://github.com/xinyiou/argos3.git",
                     "commitHash": "83dcc4d0d09ef706651c590be4830ffc2f6e850b"
                 }
+            },
+            "component": {
+                "type": "git",
+                "git": {
+                    "repositoryUrl": "https://github.com/AIS-Bonn/nimbro_network ",
+                    "commitHash": "190761d69c0a67ef6fcc1ce15c69ee6765fbc1cf"
+                }
             }
         }
     ],
