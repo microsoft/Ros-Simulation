@@ -36,3 +36,16 @@ steps:
     docker login $(registry) -u $(registry-username) -p $(registry-password)
     docker push $(registry)/$(robotImageName)
   displayName: 'docker push $(registry)/$(robotImageName)'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: 'helm/**' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    cleanTargetFolder: true
+
+- task: PublishBuildArtifacts@1
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'drop'
