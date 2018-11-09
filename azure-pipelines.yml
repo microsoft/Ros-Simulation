@@ -5,7 +5,7 @@
 
 name: Ros-Simulation-CI
 
-queue: 'Hosted Linux Preview'
+queue: 'Hosted Ubuntu 1604'
 
 trigger:
   branches:
@@ -14,8 +14,8 @@ trigger:
 
 variables:
   simulatorBaseImageName: 'argos-base'
-  simulatorImageName: 'simulator:$(build.buildId)'
-  robotImageName: 'robot:$(build.buildId)'
+  simulatorImageName: 'simulator'
+  robotImageName: 'robot'
 
 steps:
 - script: docker build -f ./argos/Dockerfile -t $(simulatorBaseImageName) .
@@ -29,12 +29,14 @@ steps:
 
 - script: |
     docker login $(registry) -u $(registry-username) -p $(registry-password)
-    docker push $(registry)/$(simulatorImageName)
+    docker push $(registry)/$(simulatorImageName):$(build.buildId)
+    docker push $(registry)/$(simulatorImageName):latest
   displayName: 'docker push $(registry)/$(simulatorImageName)'
 
 - script: |
     docker login $(registry) -u $(registry-username) -p $(registry-password)
-    docker push $(registry)/$(robotImageName)
+    docker push $(registry)/$(robotImageName):$(build.buildId)
+    docker push $(registry)/$(robotImageName):latest
   displayName: 'docker push $(registry)/$(robotImageName)'
 
 - task: CopyFiles@2
