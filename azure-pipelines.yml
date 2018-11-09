@@ -5,7 +5,7 @@
 
 name: Ros-Simulation-CI
 
-queue: 'Hosted Linux Preview'
+queue: 'Hosted Ubuntu 1604'
 
 trigger:
   branches:
